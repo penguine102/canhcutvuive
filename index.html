@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        header {
+            padding: 15px 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            gap: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: -webkit-fill-available;
+            background-color: white;
+            box-shadow: 0 0 5px 5px gray; 
+        }
+
+        .intro {
+            padding: 100px 150px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            color: black;
+        }
+
+        div {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        text {
+            width: 80%;
+        }
+
+        .txt1 {
+            color: rgb(0, 30, 255);
+        }
+
+        .text1 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .img1 {
+            border-radius: 50%;
+        }
+
+        .rcntp {
+            display: flex;
+            flex-direction: column;
+            padding: 0 150px;
+            background-color: rgb(172, 222, 251);
+        }
+
+        .txt {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .rcntp1 {
+            display: flex;
+            flex-direction: row;
+            padding: 10px 0;
+            gap: 20px;
+        }
+
+        .rcntp2 {
+            border: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .bold {
+            font-weight: 900;
+            font-size: 25px;
+        }
+
+        .ftrw {
+            padding: 15px 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ftrw1 {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+        }
+
+        .ftrw1>img {
+            min-width: 300px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #FF6464;
+            border: 0;
+            color: white;
+        }
+        .iconm {
+            position: fixed;
+            bottom: 20px;
+            right: 50px;
+        }
+
+        @media (max-width:767px) {
+            header>div {
+                display: none;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                padding: 15px 10px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .image {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .intro {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .text {
+                text-align: center;
+            }
+
+            .img1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .rcntp {
+                display: flex;
+                flex-direction: column;
+                padding: 0 15px;
+            }
+
+            .va {
+                display: none;
+            }
+
+            .rcntp1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ftrw2,
+            .ftrw3 {
+                display: none;
+            }
+
+            hr {
+                display: none;
+            }
+
+            .intro {
+                padding: 20px 15px;
+            }
+
+            .ftrw {
+                padding: 20px 15px;
+            }
+
+            .ftrw1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ftw11 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div> <a href=""> Works </a></div>
+        <div><a href=""> Blog </a></div>
+        <div><a href=""> Contacts</a></div>
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" alt="" class="menu">
+    </header>
+
+    <div class="intro">
+        <div class="text">
+            <p class="text1">Hi, I am John, <br> Creative Technologist</p>
+            </br>
+            </br>
+            <p class="text2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet</p>
+            </br>
+            </br>
+            <button> Download Resume</button>
+        </div>
+        <div class="image"></div>
+        <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" width="230"
+            height="200" alt="" class="img1">
+    </div>
+
+    <div class="rcntp">
+        <div class="txt">
+            <p>Recent post</p>
+            <a href="" class="txt1" class="va"> View all </a>
+        </div>
+        <div class="rcntp1">
+            <div class="rcntp2">
+                <p class="bold">Making a design system from scratch </p>
+                </br>
+                <p> 12 Feb | Design, Pattern</p>
+                </br>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                    consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+            </div>
+            <div class="rcntp2">
+                <p class="bold">Creating pixel perfect icons in Figma </p>
+                </br>
+                <p> 12 Feb | Figma, Icon design </p>
+                </br>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                    consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+            </div>
+        </div>
+    </div>
+
+    <div class="ftrw">
+        <p>Featured works</p>
+        <div class="ftrw1">
+            <img src="https://www.geckoboard.com/uploads/customer-service-dashboard-example.png" width="300"
+                height="200" alt="" class="ftrw11">
+            <div>
+                <p class="bold"><a href="">Designing Dashboards</a></p>
+                </br>
+                <p class="meme">2020 Dashboard </p>
+                </br>
+                <p class="meme"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Vellit
+                    officia consequat
+                    duis enim velit mollit. Excerciation veniam consequat sunt nosfrud amet.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="ftrw1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdxBwfm8f8hIRmhvY97E4V2w9EWXcLHvkJSg&s"
+                width="300" height="200" alt="">
+            <div>
+                <p class="bold"> <a href=""> Vibrant Portraits of 2020 </a> </p>
+                </br>
+                <p>2018 Illustration </p>
+                </br>
+                <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Vellit officia consequat
+                    duis enim velit mollit. Excerciation veniam consequat sunt nosfrud amet.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="ftrw1">
+            <img src="https://3.imimg.com/data3/HG/OV/MY-1821932/malyalam-learning.jpg" width="300" height="200" alt="">
+            <div>
+                <p class="bold"> <a href="">36 Days off Malayalam type</a> </p>
+                </br>
+                <p>2018 Typography </p>
+                </br>
+                <p> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Vellit officia consequat
+                    duis enim velit mollit. Excerciation veniam consequat sunt nosfrud amet.</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+<div class="iconm">
+    <img src="https://cdn-icons-png.flaticon.com/128/953/953810.png" alt=""/>
+</div>
+    <footer>
+        <img src="https://cdn.pixabay.com/photo/2021/03/06/18/22/logo-6074368_1280.png" width="20" height="20" alt="">
+        <img src="https://i.pinimg.com/736x/d5/3c/7e/d53c7e89006b47482a3c7ec2406825a3.jpg" width="20" height="20"
+            alt="">
+        <img src="https://img.freepik.com/premium-vector/social-media-logo_1305298-30376.jpg" width="20" height="20"
+            alt="">
+        <img src="https://cdn-icons-png.freepik.com/256/717/717416.png?semt=ais_hybrid" width="20" height="20" alt="">
+    </footer>
+</body>
+
+</html>
